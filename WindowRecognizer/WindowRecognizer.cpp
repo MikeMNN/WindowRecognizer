@@ -218,6 +218,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         HFONT edit_font = CreateFont(-14, 0, 0, 0, 0, 0u, 0U, 0U,
                                      ANSI_CHARSET, 0U, 0U, 0U, 0U, constants::font_name);
         SendMessage(edit_hwnd, WM_SETFONT, (WPARAM)edit_font, TRUE);
+        DeleteObject(edit_font);
       };
 
       AddEditBox(IDM_EDIT_WINDOW_CLASS, current_top_pos);
